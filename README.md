@@ -5,7 +5,7 @@
 
 # Welcome to our Scripts repository
 
-This repository contains all of the scripts and related scripting information that we used during this project. Creating scripts increases efficiency, resulting in being able to quickly replicate systems, settings, etc. to our standards and best practices. Our scripts were primarily used for configuring the automation of tasks to support Globex's Network Infrastructure. Automation not only reduces the time it takes to perform repetitive tasks, it also reduces errors sustained during the repeated performance of those tasks.
+This repository contains any scripts and related code that was used during this project. These scripts give us the ability to quickly replicate systems, settings, etc. as they are needed.
 
 <br>
 
