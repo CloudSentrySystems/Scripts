@@ -25,7 +25,7 @@ LOCROC_PATH = "/path/to/rockyou.txt"
 try:
     import asyncssh
 except ImportError:
-    subprocess.run(["sudo", "pip", "install", "asyncssh"])
+    subprocess.run(["sudo", "pip3", "install", "asyncssh"])
 
 # Download rockyou.txt
 wordlist_path = LOCROC_PATH
