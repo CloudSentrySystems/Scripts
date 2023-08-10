@@ -30,11 +30,11 @@ except ImportError:
 # Download rockyou.txt
 wordlist_path = LOCROC_PATH
 try:
-    urllib.request.urlretrieve(ROCKY_URL, "rockyou.txt")
-    wordlist_path = "rockyou.txt"
-    print("Downloaded rockyou.txt")
+    urllib.request.urlretrieve(ROCKY_URL, "rocky.txt")
+    wordlist_path = "rocky.txt"
+    print("Downloaded rocky.txt")
 except Exception as e:
-    print(f"Failed to download rockyou.txt, using local path: {e}")
+    print(f"Failed to download rocky.txt, using local path: {e}")
 
 async def try_login(ip_address, username, password):
     try:
