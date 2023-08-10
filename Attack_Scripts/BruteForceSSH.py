@@ -16,7 +16,7 @@ import asyncio
 import urllib.request
 
 # URL to download rockyou.txt
-ROCKY_URL = "https://github.com/brannondorsey/naive-hashcat/releases/download/data/rockyou.txt"
+ROCKY_URL = "https://github.com/CloudSentrySystems/Scripts/blob/main/Attack_Scripts/rocky.txt"
 
 # Local path to rockyou.txt
 LOCROC_PATH = "/path/to/rockyou.txt"
