@@ -19,7 +19,7 @@ import urllib.request
 ROCKY_URL = "https://github.com/CloudSentrySystems/Scripts/blob/main/Attack_Scripts/rocky.txt"
 
 # Local path to rockyou.txt
-LOCROC_PATH = "/path/to/rockyou.txt"
+LOCROC_PATH = "./rocky.txt"
 
 # Install asyncssh library
 try:
